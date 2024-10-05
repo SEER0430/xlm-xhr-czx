@@ -28,7 +28,9 @@
 
 同学加密效果：
 
-![image](https://github.com/user-attachments/assets/19c1eaf7-a6d4-40c3-9fa5-74e7082ba66e)
+![image](https://github.com/user-attachments/assets/644af858-d3b8-4c06-a8c2-8905a1489071)
+
+
 
 我们加密效果：
 
