@@ -7,42 +7,69 @@
 测试要求
 
 3.1
-第1关：基本测试       
+
+第1关：基本测试    
+
 根据S-DES算法编写和调试程序，提供GUI解密支持用户交互。输入可以是8bit的数据和10bit的密钥，输出是8bit的密文。
+
 1.输入8bit明文
+
 2.输入10bit密钥
+
 3.选择加密/解密功能
-https://github.com/user-attachments/assets/f6ae21e9-bd89-48dc-819f-9f0ebbefab6e
+
+![image](https://github.com/user-attachments/assets/73eed5aa-00ce-44e1-b2fa-e1def26ec708)
+
 
 3.2 
 第2关：
+
 交叉测试考虑到是算法标准，所有人在编写程序的时候需要使用相同算法流程和转换单元(P-Box、S-Box等)，以保证算法和程序在异构的系统或平台上都可以正常运行。设有A和B两组位同学(选择相同的密钥K)；则A、B组同学编写的程序对明文P进行加密得到相同的密文C；或者B组同学接收到A组程序加密的密文C，使用B组程序进行解密可得到与A相同的P。
+
 同学加密效果：
+
 ![image](https://github.com/user-attachments/assets/19c1eaf7-a6d4-40c3-9fa5-74e7082ba66e)
+
 我们加密效果：
+
 ![image](https://github.com/user-attachments/assets/166e54a3-5981-4a67-9954-2f841a3fd88a)
+
 对于相同的加密方法所得到的结果相同，可见符合算法标准。
 
 3.3
 第3关：
+
 扩展功能考虑到向实用性扩展，加密算法的数据输入可以是ASII编码字符串(分组为1 Byte)，对应地输出也可以是ACII字符串(很可能是乱码)。
+
 ![image](https://github.com/user-attachments/assets/fcd9bf8e-be92-4c6e-ae78-77c88b1f300d)
+
 ![image](https://github.com/user-attachments/assets/4f69b77e-25c1-48cf-b6e5-8ee1fce7109e)
+
 对于'wraith'一词的加解密案例
 
 3.4 
+
 第4关：
+
 暴力破解假设你找到了使用相同密钥的明、密文对(一个或多个)，请尝试使用暴力破解的方法找到正确的密钥Key。在编写程序时，你也可以考虑使用多线程的方式提升破解的效率。请设定时间戳，用视频或动图展示你在多长时间内完成了暴力破解。
+
 ![image](https://github.com/user-attachments/assets/cfdbcb55-ca4b-4606-8f14-7d3dbc8a8574)
+
 ![image](https://github.com/user-attachments/assets/36b6d8f9-4d8e-48a9-9753-14c78e539fc6)
+
 此次对于“hello world”的解密用时0.19秒。
 
 3.5
 第5关：
+
 封闭测试根据第4关的结果，进一步分析，对于你随机选择的一个明密文对，是不是有不止一个密钥Key？进一步扩展，对应明文空间任意给定的明文分组P_{n}，是否会出现选择不同的密钥K_{i}\ne K_{j}加密得到相同密文C_n的情况？
+
 对于我随机选择的一个明密文对，不止有一个密钥key。
+
 ![image](https://github.com/user-attachments/assets/0aea43b3-d67e-4d78-9097-504efcfdc3b8)
+
 可能存在。
+
 在使用对称加密算法（例如 SDES）时，如果对于同一个明文分组 \( P_n \) 选择不同的密钥 \( K_i \) 和 \( K_j \) 进行加密，得到相同的密文 \( C_n \) 的情况是可能的。这种现象称为“密文碰撞”（ciphertext collision）。
 原因分析：
 
